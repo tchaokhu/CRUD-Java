@@ -13,18 +13,6 @@ import java.util.UUID;
 public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
-//    public List<Student> getStudnets(){
-//        return List.of(
-//                new Student(
-//                        1L,
-//                        "Mariam",
-//                        "mariam.jamel@gmail.com",
-//                        LocalDate.of(2000, Month.JANUARY,5),
-//                        21
-//
-//                )
-//        );
-//    }
     public Student createStudent(String name,String email, Integer age){
         UUID studentId = UUID.randomUUID();
         Student student = studentRepository.save(new Student(
